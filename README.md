@@ -6,27 +6,20 @@
 The company is trying new ad design to increase ad success.
 To do so they made new creative advertising design with SmartAd brand and conduct an A/B test in which one group of users have been shown an old ad and another - new one.
 
-- **Experiment Approach**
-
-Our goal is to analyse the results of A/B test and figure out wherever new disign of ad affects the behavior of users in terms of responding to BIO questionnaire.
-
-- **Null Hypothesis Hₒ: p = pₒ** - There is no significant difference between the ad success rate of both groups
-
-
-- **Alternative Hypothesis Hₐ: p ≠ pₒ** - There is significant difference between the ad success rate of both groups.
-Given we don’t know if the new design will perform better/worse/equal as our current design, we will perform a two-tailed test
-
-
-- **Confidence Level:** 95% (α=0.05)
-
-
-- **p** and **pₒ** stand for the conversion rate of the new and old design.
+Whole analysis and results can be find in the following [notebook](https://github.com/LtvnSergey/Advertising-A-B-Testing/blob/main/notebooks/Advertising-A-B-Testing.ipynb).
 
 ## Contents
 
+  - [Project structure](#project-structure)
+  - [Data description](#data-description)
+  - [Experiment approach](#experiment-approach)
+  - [Conducted tests](#conducted-tests)
+  - [Conclusion](#conclusion)  
+  - [Modules and tools](#modules-and-tools)
+
 ### Project structure
 - [Input data](https://github.com/LtvnSergey/Advertising-A-B-Testing/tree/main/data)
-- [Notebook](https://github.com/LtvnSergey/Advertising-A-B-Testing/blob/main/notebooks/Advertising-A-B-Testing.ipynb)
+- [Notebook with analysis](https://github.com/LtvnSergey/Advertising-A-B-Testing/blob/main/notebooks/Advertising-A-B-Testing.ipynb)
 
 
 ### Data description
@@ -47,7 +40,7 @@ Given we don’t know if the new design will perform better/worse/equal as our c
 | no | 1 if the user chooses the “No” radio button for the BIO questionnaire |
 
 
-### Experiment Approach
+### Experiment approach
 
 Our goal is to analyse the results of A/B test and figure out wherever new disign of ad affects the behavior of users in terms of responding to BIO questionnaire.
 
@@ -63,7 +56,7 @@ Given we don’t know if the new design will perform better/worse/equal as our c
 
 - **p** and **pₒ** stand for the conversion rate of the new and old design.
 
-### Conducted Tests
+### Conducted tests
 
 **1. Fisher exact test**
 
@@ -71,7 +64,7 @@ Given we don’t know if the new design will perform better/worse/equal as our c
 
 ![image](https://user-images.githubusercontent.com/35038779/210568945-e3cfb2eb-a1a7-4392-89c6-56e39ccd42b2.png)
 
-- Result: Fisher test p-value: 0.53, therefor we cannot reject Hₒ hypothesis
+- **Result**: Fisher test p-value: 0.53, therefor we cannot reject Hₒ hypothesis
 
 
 **2. Confidence Interval**
@@ -80,6 +73,14 @@ Given we don’t know if the new design will perform better/worse/equal as our c
 
 ![image](https://user-images.githubusercontent.com/35038779/210570014-6127b388-6821-4314-80a0-c5b23d2fd900.png)
 
+- **Result**: Confidence interval showed us that with 95% difference between two mean can be found between [-0.04, 0.07] which means we cannot reject Null hypothesis.
 
 
+### Conclusion
 
+- Based on the results of conducted A/B test with Fisher exact test and confidence interval we can conclude that new ad design havent changed the conversion rate.
+
+
+### Modules and tools
+
+Python | Pandas | Numpy | Stats
