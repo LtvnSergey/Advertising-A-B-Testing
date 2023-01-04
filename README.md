@@ -63,6 +63,7 @@ Given we don’t know if the new design will perform better/worse/equal as our c
 - Fisher exact test was used to show how response-rate variable differs between control and exposed group
 
 - Based on contingency table p-value was calculated
+
 ![image](https://user-images.githubusercontent.com/35038779/210568945-e3cfb2eb-a1a7-4392-89c6-56e39ccd42b2.png)
 
 - **Result**: Fisher test p-value: 0.53, therefor we cannot reject Hₒ hypothesis
